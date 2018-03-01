@@ -1,0 +1,21 @@
+<h3>Apartments</h3>
+<table id="resources">
+  <tr>
+    <th>Building</th>
+    <th>Apartment #</th>
+    <th>Apartment Type</th>
+    <th>Beds/Baths/Total</th>
+    <th>Monthly Rate</th>
+    <th>Date Available</th>
+  </tr>
+  <% @apartments.each do |apartment| %>
+    <tr>
+      <td><%= apartment.building.name %></td>
+      <td><%= apartment.apt_number %></td>
+      <td><%= apartment.apartment_type %></td>
+      <td><%= "#{apartment.bedroom_count}/#{apartment.bathroom_count}/#{apartment.room_count}" %></td>
+      <td><%= number_to_currency(apartment.monthly_rate, precision: 0) %></td>
+      <td><%= apartment.date_available %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,19 @@
+# Before Launch:
+
+* When deploying to Heroku, follow these directions:
+  https://stackoverflow.com/questions/5013955/problem-implementing-wicked-pdf-on-heroku/16577677#16577677
+
+# Longer Term:
+* Maybe on a guest page, have a feature to send a follow up email.
+* Work on an export to XLS feature. (It looks like this will require forking a gem and fixing it.)
+* Eventually, if I get bored, I could add aasm to this project to take different
+  actions or display different things when transitioning between various booking statuses:
+  https://github.com/activeadmin/activeadmin/wiki/How-to-work-with-AASM
+  This would make the process easier for determining which apartments were available, available soon, etc.
+* Maybe play with roles, like an admin user who can do everything, and some less-privileged
+  user who can't delete records, or who can create bookings that need to be approved by a manager.
+* It would be really nice if dates that weren't available for an apartment were
+  grayed out when booking for a specific apartment. Might require a different calendar widget.
+* Add some reports, such as monthly income.
+* On the apartment index page, add a scope for apartments that are available now, and
+maybe for ones that will be available in the next 3 months.

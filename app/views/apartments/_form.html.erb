@@ -1,0 +1,52 @@
+<%= form_with(model: apartment, local: true) do |form| %>
+  <% if apartment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+
+      <ul>
+      <% apartment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :building_id %>
+    <%= form.number_field :building_id, id: :apartment_building_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apartment_type_id %>
+    <%= form.number_field :apartment_type_id, id: :apartment_apartment_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apt_number %>
+    <%= form.text_field :apt_number, id: :apartment_apt_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bathroom_count %>
+    <%= form.text_field :bathroom_count, id: :apartment_bathroom_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bedroom_count %>
+    <%= form.number_field :bedroom_count, id: :apartment_bedroom_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :room_count %>
+    <%= form.number_field :room_count, id: :apartment_room_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :apartment_notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

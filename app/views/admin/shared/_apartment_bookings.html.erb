@@ -1,0 +1,23 @@
+<div class="panel">
+  <h3>Booking History for this Apartment</h3>
+  <div class="panel_contents">
+    <div id="table_for_bookings" class="attributes_table booking">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <thead>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Guests</th>
+        </thead>
+        <tbody>
+          <% bookings.each do |booking| %>
+            <tr>
+              <td><%= booking.booking_start_date %></td>
+              <td><%= booking.booking_end_date %></td>
+              <td><%= booking.guests.collect(&:full_name).join(', ') %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

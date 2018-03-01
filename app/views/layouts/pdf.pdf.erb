@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= wicked_pdf_stylesheet_link_tag "pdf" %>
+    <%= stylesheet_link_tag wicked_pdf_asset_base64("pdf") %>
+  </head>
+
+  <body>
+    <h2>Sample Output from Apartment Booking Demo Site</h2>
+    <%= yield %>
+  </body>
+</html>

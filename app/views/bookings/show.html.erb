@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @booking.apartment_id %>
+</p>
+
+<p>
+  <strong>Guest:</strong>
+  <%= @booking.guest_id %>
+</p>
+
+<p>
+  <strong>Booking status:</strong>
+  <%= @booking.booking_status_id %>
+</p>
+
+<p>
+  <strong>Booking start date:</strong>
+  <%= @booking.booking_start_date %>
+</p>
+
+<p>
+  <strong>Booking end date:</strong>
+  <%= @booking.booking_end_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @booking.notes %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

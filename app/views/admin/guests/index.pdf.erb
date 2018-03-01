@@ -1,0 +1,19 @@
+<h3>Guests</h3>
+<table id="resources">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Date of Birth</th>
+    <th>Tenant Status</th>
+  </tr>
+  <% @guests.each do |guest| %>
+    <tr>
+      <td><%= guest.full_name %></td>
+      <td><%= guest.email %></td>
+      <td><%= guest.phone_number %></td>
+      <td><%= guest.date_of_birth %></td>
+      <td><%= guest.tenant_status %></td>
+    </tr>
+  <% end %>
+</table>
