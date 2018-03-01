@@ -42,6 +42,7 @@ gem 'formadmin'
 gem 'devise'
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
+gem 'wkhtmltopdf-heroku'
 
 # validate phone numbers
 gem 'phony_rails'
