@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :bookings
   resources :buildings
 
-  root to: 'apartments#index'
+  root to: 'admin/dashboard#index'
 end
