@@ -1,4 +1,7 @@
 ActiveAdmin.register Building do
+  config.per_page = [10, 25, 50]
+  menu priority: 2
+  includes :building_amenities, :apartments
   permit_params :name, :description, :street_address, :city, :state_id, :zip, :manager_name, :phone_number, :notes, building_amenity_ids: []
 
   remove_filter :description, :notes, :state_id, :created_at, :updated_at, :apartments

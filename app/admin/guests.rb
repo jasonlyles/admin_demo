@@ -1,4 +1,9 @@
 ActiveAdmin.register Guest do
+  config.per_page = [10, 25, 50]
+  menu priority: 4
+  config.create_another = true
+
+  includes :bookings
   permit_params :gender, :first_name, :last_name, :date_of_birth, :notes, :email, :phone_number
 
   filter :gender, as: :select, collection: -> { Gender::TYPES }

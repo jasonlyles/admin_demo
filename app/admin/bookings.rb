@@ -1,4 +1,6 @@
 ActiveAdmin.register Booking do
+  config.per_page = [10, 25, 50]
+  menu priority: 5
   permit_params :apartment_id, :booking_start_date, :booking_end_date, :notes, :status, :actual_monthly_rate, guest_ids: []
 
   scope :all, default: true

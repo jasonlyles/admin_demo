@@ -1,4 +1,9 @@
 ActiveAdmin.register Apartment do
+  config.per_page = [10, 25, 50]
+  menu priority: 3
+  config.create_another = true
+
+  includes :amenities, :bookings, :guests
   permit_params :building_id, :apartment_type, :apt_number, :bathroom_count, :bedroom_count, :room_count, :notes, :monthly_rate, amenity_ids: []
 
   filter :apartment_type, as: :select, collection: -> { ApartmentType::TYPES }

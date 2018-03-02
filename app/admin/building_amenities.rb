@@ -1,4 +1,6 @@
 ActiveAdmin.register BuildingAmenity do
+  menu parent: 'Admin'
+
   permit_params :name
 
   config.filters = false
